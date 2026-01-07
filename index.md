@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Home
+title: DS2002 Data Science Systems
 ---
-# Welcome to DS2002 Data Science Systems!
+## Course Description
 
-This repository tracks your working environment during this course. Course materials and tools are distributed through this repository to ensure we all have a common set of tools, scripts, and datasets.
+This course exposes students to the essential technical concepts and skills for designing and running data science workloads. Students will be equipped to select and manage computing environments and storage options large and small. They will also learn methods for software delivery, scaling for larger jobs, and the essential database models for data storage and data analysis. 
+
+Students in this course will become much more familiar with the command-line interface, scripting and managing code, and creating/managing local and cloud-based resources. A central goal of the course is to equip students in the technical aspects of their later work in data science, so that students have a wide range of tools, techniques, and skills for processing a variety of workloads. 
 
 ## Getting Started
 
