@@ -1,8 +1,6 @@
 # Storage and Transfer
 
-Amazon S3 will be the primary storage service for this course. Below are instructions
-for setting up your CLI tools, authenticating, and the steps for uploading,
-downloading, listing, or sharing objects within S3.
+Amazon S3 will be the primary storage service for this course. Below are instructions for setting up your CLI tools, authenticating, and the steps for uploading, downloading, listing, or sharing objects within S3.
 
 ## AWS CLI Setup
 
@@ -37,8 +35,8 @@ aws configure
 You will be prompted to enter four values:
 
 1. Your AWS access keys: `aws_access_key_id` / `aws_secret_access_key`: These can be obtained from within your AWS account. [See this AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for how to retrieve these two keys. If you are the root account owner, go to your account security settings to retrieve these. It is highly advised NOT to use root credentials for access in this way.
-3. Your default AWS region: Unless you know your S3 bucket is scoped to another region, enter `us-east-1`.
-4. Your default output format: Your options are `text`, `json` and `table` output.
+2. Your default AWS region: Unless you know your S3 bucket is scoped to another region, enter `us-east-1`.
+3. Your default output format: Your options are `text`, `json` and `table` output.
 
 The AWS account you enter in these steps must have at least read permissions to access the resources you want to download.
 
