@@ -35,33 +35,38 @@ Since we're using the Linux command line, you will need to install a Linux-like 
 
 2.2 Run the Executable Installer: Double-click the downloaded .exe file to run the installer.
    - Follow the prompts, accepting the license agreement.
-   - It is highly recommended to install for "Just Me" (per user) to avoid potential permission issues later.
-   - Note the installation path: The default installation path is usually within your AppData\Local folder (e.g., `C:\Users\YOUR_USERNAME\miniforge3` or `C:\Users\YOUR_USERNAME\AppData\Local\miniforge3`). Remember this location.
+   - It is highly recommended to install for "Just Me" (per user) to avoid potential permission issues later. 
+   - Note the installation path: The default installation path is usually within your AppData\Local folder (e.g., `C:\Users\YOUR_USERNAME\miniforge3` or `C:\Users\YOUR_USERNAME\AppData\Local\miniforge3`). Trim it back to `C:\Users\YOUR_USERNAME\miniforge3` if needed. Copy paste that path to your clipboard.
    - Check the "Create start menu shortcuts" option. The most convenient and tested way to use the installed software (such as commands conda and mamba) is via the "Miniforge Prompt" installed to the start menu.
    - Check the "Add Miniforge3 to my PATH environment variable" option. 
+
+2.3. Configure bash for Python
+   - Open a new ***Git Bash terminal*** (not the Windows PowerShell) and execute the following command:
+   ```bash
+   echo 'echo "Sourcing .bashrc" && eval "$(mamba.exe shell hook --shell bash)" && mamba activate' >> ~/.bashrc
+   ```
 
 ### 3. Create a conda (mamba) environment. 
 3.1. Open a new ***Git Bash terminal*** (not the Windows PowerShell) and execute the following command:
    ```bash
-   mamba env create -n ds2002 -c conda-forge python=3.11 htop jq awscli curl wget git zip unzip tar redis-server redis-py mongodb
+   mamba env create -n ds2002 -c conda-forge python=3.11 pip jq awscli curl git redis-py mongodb
+   mamba activate ds2002
+   pip install zip unzip wget
    ```
+   
 3.2. Check your environments:
    ```bash
-   conda env list
+   mamba env list
    ```
 
    You should see:
    ```bash
    # conda environments:
    #
-   base                 * /Users/khs3z/miniforge3
-   ds2002                 /Users/khs3z/miniforge3/envs/ds2002
+   base                 * C:\Users\mst3k\miniforge3
+   ds2002                 C:\Users\mst3k\miniforge3\envs\ds2002
    ```
 
-3.3. Run the following command to update your `~/.bashrc` file. Adjust the path if you installed Miniforge in a non-default location (see step 3):
-```bash
-echo "source ~/AppData/Local/miniforge3/etc/profile.d/conda.sh" >> ~/.bashrc
-```
 
 ### 4. Restart Git Bash and Verify:
 4.1. Close and re-open your Git Bash terminal for the changes to take effect.
