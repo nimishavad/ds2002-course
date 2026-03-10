@@ -1,0 +1,7 @@
+name	major	course_name	grade
+Alex	CS	Data Science	A
+Chris	Math	Calculus	A
+Evan	Physics	Physics	A
+George	History	World History	A
+Hannah	CS	Programming	A
+Julia	Psychology	Psychology	A
